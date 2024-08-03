@@ -2,20 +2,23 @@ import styled from "styled-components";
 import ImgHeader from "../../img/imgHeaderEscuro.png";
 import Input from "../../../../components/inputs";
 
-export default function headerImg(){
+export default function HeaderImg(){
     return(
         <Container>
-            <Div><Input width="350px" height="30px" type="text" placeholder="Nome do personagem"/></Div>
-        </Container>
+            <ContainerInput left={"100px"} bottom={"28%"}>
+                <Input width="270px" height="20px" type="text" placeholder="Nome do personagem"/>
+            </ContainerInput>
+        </Container> 
     );
 }
 
-const Container = styled.div`
+const Container = styled.header`
 
     background-image: url(${ImgHeader});
-    background-size: 100% auto;
+    background-size: 1280px 200px;
     background-repeat: no-repeat;
-    height: 100%;
+    min-height: 200px;
+    max-width: 1280px;
     position: absolute;
     top: 0;
     left: 0;
@@ -24,9 +27,9 @@ const Container = styled.div`
 
 `
 
-const Div = styled.div`
+const ContainerInput = styled.div`
     height: auto;
     position: absolute;
-    bottom: 550px;
-    left: 210px;
+    left: ${({ left }) => left || 'auto' };
+    bottom: ${(bottom) => bottom || 'auto'};
 `   

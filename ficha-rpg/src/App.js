@@ -1,18 +1,16 @@
 import './ascents/styles/reset.css';
 import './App.css';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import HeaderImg from './modules/base/components/imgHeader';
-import Input from './components/inputs';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ScreenBase from './modules/base/screens';
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <Router>
         <Routes>
-          <Route path='/' element={<HeaderImg/>}/>
-          <Route path='/input' element={<Input/>}/>
+          <Route path='/' element={<ScreenBase/>}/>
         </Routes>
-      </BrowserRouter>
+      </Router>
     </div>
   );
 }
