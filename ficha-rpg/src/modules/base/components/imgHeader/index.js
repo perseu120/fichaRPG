@@ -8,6 +8,31 @@ export default function HeaderImg(){
             <ContainerInput left={"100px"} bottom={"28%"}>
                 <Input width="270px" height="20px" type="text" placeholder="Nome do personagem"/>
             </ContainerInput>
+
+            <ContainerInput left={"570px"} bottom={"46%"}>
+                <Input width="160px" height="20px" type="text" placeholder="classe e nivel"/>
+            </ContainerInput>
+
+            <ContainerInput left={"780px"} bottom={"46%"}>
+                <Input width="160px" height="20px" type="text" placeholder="antecedente"/>
+            </ContainerInput>
+
+            <ContainerInput left={"990px"} bottom={"46%"}>
+                <Input width="160px" height="20px" type="text" placeholder="Nome do jogador"/>
+            </ContainerInput>
+
+            <ContainerInput left={"570px"} bottom={"24%"}>
+                <Input width="160px" height="20px" type="text" placeholder="raça"/>
+            </ContainerInput>
+
+            <ContainerInput left={"780px"} bottom={"24%"}>
+                <Input width="160px" height="20px" type="text" placeholder="alinhamento"/>
+            </ContainerInput>
+
+            <ContainerInput left={"990px"} bottom={"24%"}>
+                <Input width="160px" height="20px" type="text" placeholder=" pontos de Xp"/>
+            </ContainerInput>
+
         </Container> 
     );
 }

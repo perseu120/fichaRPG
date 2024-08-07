@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-export default function Input({type, placeholder, width, height}){
+export default function Input({type, placeholder, width, height, border}){
 
     return(
-        <ContainerInput width ={width} height={height} type={type} placeholder={placeholder || ""} >
+        <ContainerInput width ={width} height={height} type={type} border={border} placeholder={placeholder || ""} >
         </ContainerInput>
     );
 }
@@ -11,7 +11,8 @@ export default function Input({type, placeholder, width, height}){
 const ContainerInput = styled.input`
     width: ${({ width }) => width || 'auto' };
     height: ${(height)=> height || 'auto'};
-    padding: 8px 15px;
+    border-radius: ${(border)=> border || 'auto'};
+    
     margin-top: 5%;
     font-size: 26px;
     background-color: #383c42;

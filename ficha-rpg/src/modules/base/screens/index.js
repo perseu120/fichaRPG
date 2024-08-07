@@ -41,15 +41,15 @@ const Container = styled.div`
 const CharacterSheetBody = styled.div`
     
     display: flex;
-    align-items: start;
-    justify-content: space-around;
-    flex-direction: row;
+    flex-wrap: nowrap;
+    flex: 1;
     min-width: 1280px;
 
     div{
+        display: flex;
+        flex: 1;
         border: solid 2px;
         height: 300px;
+        box-sizing: border-box;
     }
-    
-
 `;
