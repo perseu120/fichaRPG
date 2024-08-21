@@ -1,17 +1,21 @@
 import styled from "styled-components";
 
 
-export default function Ability(){
+export default function Ability({children, left, top}){
     return(
-        <Container>
-            <Attribute> constinuicao</Attribute>
+        <Container top={top} left={left} >
+
+            <Attribute> {children}</Attribute>
             <Bonus> +5 </Bonus>
             <CircleInput type={"number"} />
         </Container>
     );
 }
 
-const Container = styled.div`
+// como o position é absolute, tem que setar a posição dele manualmente
+// então fazer le receber a posição nanuamente, e adicionar aqui como props
+
+const Container = styled.div` 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,7 +26,8 @@ const Container = styled.div`
     border-bottom: 0;
     border-radius: 20%;
     background-color: #090909; 
-
+    top: ${({top})=> top};
+    left: ${({ left }) => left};
 `;
 
 const Attribute = styled.p`
